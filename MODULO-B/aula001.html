@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+     /* Estilos para o modal */
+     #myModal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 5px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1; /*Deixa a div abaixo das outras que não tem esse valor*/
+        }
+
+        #myModal p {
+            text-transform: uppercase;
+        }
+
+        /* Estilos para a sobreposição do fundo */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.521);
+            
+        }
+
+        /* Estilos para o botão de fechar o modal */
+        #closeBtn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da Maldição</p>
+
+    <button onclick="openModal()">Mostrar Alerta Estilizado</button>
+
+    <div id="myModal">
+        <span id="closeBtn" onclick="closeModal()">&times;</span> <!--Esse é o X do botão FECHAR-->
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ipsam a sapiente dignissimos minus ipsa quo aliquam suscipit perferendis dolorum esse reprehenderit repellendus officiis cumque quibusdam libero, eius soluta earum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, officiis nobis quisquam quo eos consequuntur necessitatibus nemo, nulla molestiae ipsum animi, placeat dolore laboriosam impedit distinctio ducimus et iusto sequi.
+
+        </p>
+    </div>
+    <!-- Sobreposição do fundo -->
+    <div id="overlay"></div>   
+
+    <script>
+        // Função para abrir o modal
+        function openModal() {
+            document.getElementById('myModal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+    
+        // Função para fechar o modal
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
