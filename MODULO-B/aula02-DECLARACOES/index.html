@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--AULA 02 TIPOS DE DECLARAÇÕES-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
+</head>
+<body id="corpo">
+    <h1>Aprendendo Javascript</h1>
+    <p id="texto"></p>
+    
+    <button id="testebtn" onclick="minhaFuncao()">TESTE FUNÇÃO</button>
+    
+    
+    <p>
+        <script>
+            /*Aceita tags e texts, bem como funções, ex: 5+5*/
+            document.write('Oi, <u>escrito com document.write</u><br>');
+            document.write(5+5);
+
+            document.write(minhaFuncao())
+            
+        </script>
+    </p>
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>
