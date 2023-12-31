@@ -20,8 +20,51 @@ const lista = [
 const pessoa = ["Vinicius", "Libanio", 33]; //ARRAY
 const pessoas = { nome: "Vinicius", sobrenome: "Libanio", idade: 33 }; //OBJETO
 
+pessoa.shift(); //REMOVE O PRIMEIRO ITEM DA MATRIZ, ATENTAR, POIS TODOS OS INDICES SERÃO ALTERADOS.
+pessoa.unshift("Vini"); //ADICIONA EM PRIMEIRO O ITEM DECLARADO.
+pessoa.pop(); //RETIRA O ÚLTIMO ITEM DA MATRIZ(ARRAY)
 pessoa.push("Brasileiro"); //adiciona um item ao final do array
+delete pessoa[0]; // DELETA O ITEM DECLARADO NO INDICE, PORÉM DEIXA O ESPAÇO COMO UNDEFINED, NÃO SENDO OCUPADO.
+
+const lista1 = ["arroz", "feijão", "leite", "macarrão"];
+const lista2 = ["suco", "refrigerante", "carne"];
+const superLista = lista1.concat(lista2);
+
+document.getElementById("teste2").innerHTML = superLista.join(", ");
+
+const alfabeto = [
+  "F",
+  "H",
+  "C",
+  "D",
+  "O",
+  "A",
+  "G",
+  "S",
+  "B",
+  "L",
+  "J",
+  "K",
+  "I",
+  "M",
+  "N",
+  "E",
+  "P",
+  "X",
+  "R",
+  "T",
+  "U",
+  "V",
+  "Q",
+  "W",
+  "Y",
+  "Z",
+];
+
+const alfabetoOrdem = alfabeto.sort(); //DEIXA EM ORDEM ALFABÉTICA.
 
 /* alert(pessoa[pessoa.length - 1]); */ //exibe sempre o último item do array.
 
-alert(Array.isArray(pessoa)); //retorna TRUE, confirmando que a variável é um array.
+/* alert(Array.isArray(pessoa));  */ //retorna TRUE, confirmando que a variável é um array.
+
+document.getElementById("teste").innerHTML = alfabetoOrdem;
