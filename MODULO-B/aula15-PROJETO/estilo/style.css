@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(202, 209, 215);
+    width: 100vw;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    align-items: center;
+    margin: auto auto;
+}
+
+input {
+    height: 100px;
+    font-size: 2rem;
+    width: 80%;
+    padding-left: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+button.add {
+    height: 100px;
+    width: 20%;
+    cursor: pointer;
+    background: rgba(56, 197, 56, 0.863);
+    color: white;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 2px solid black;
+}
+
+button.add:hover {
+    background-color: rgba(14, 229, 14, 0.901);
+    font-size: 1rem;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    margin: auto auto;
+    padding-top: 40px;
+}
+
+.item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 20px #918d8d86;
+    margin-bottom: 1%;
+    padding-left: 1%;
+    cursor: pointer;
+}
+
+.itemIcone {
+    flex: 5%;
+}
+
+.itemNome {
+    flex: 75%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.itemBotao {
+    flex: 20%;    
+}
+
+#delete {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 80px;
+    border: none;
+    text-align: center;
+    background-color: rgb(255, 68, 68);
+    cursor: pointer;
+    color: white;
+}
+
+#delete:hover {
+    background-color: red;
+}
+
+.item.clicado {
+    background-color: rgb(200, 247, 200);
+}
+
+.item.clicado .itemNome {
+    text-decoration: line-through;
+    color: grey;
+}
